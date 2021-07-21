@@ -1,3 +1,5 @@
+'use strict'
+
 const express = require('express');
 const dotenv = require('dotenv')
 const cors = require('cors');
@@ -7,6 +9,11 @@ dotenv.config();
 
 const app = express(); 
 app.use(cors())
+app.use(express.json())
+
+
+
+
 
 
 app.get('/weather', (req, res) =>{
@@ -14,19 +21,29 @@ app.get('/weather', (req, res) =>{
     let lat = req.query.lat;
     let query = req.query.searchQuery;
     
-
-    let newArr = weatherData.map(item => {
-        if(item.lat === lat || item.lon === lon || item.city_name === query){
-            return item;
-        }else{
-            res.send('City could not be found')
-        }
+    const newArr = weatherData.find(item => {
+        return item.city_name === query;
     })
+    
+
+    
+    // console.log(newArr)
     
     res.json(newArr);
     
+    
 })
 
+class Forecast {
+    constructor(obj){
+        this.date = obj.datetime;
+        this.description = obj.description;
+    }
+}
+
+app.get('*', (req, res) => {
+    res.status(404).send('Page not found')
+})
 
 app.listen(process.env.PORT, () => {
     console.log('Server has now started');
