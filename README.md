@@ -1,3 +1,4 @@
+
 # city-explorer-api
 
 **Author**: Peter Luna
@@ -10,7 +11,9 @@
 <!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
 
 ## Architecture
-<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+![wireframehttprequest](https://user-images.githubusercontent.com/32520466/126553596-65f5bfc4-a31a-4ab7-8f4b-fce050e4706d.PNG)
+![wireframe2](https://user-images.githubusercontent.com/32520466/126553599-382260b7-0976-481d-92f8-0af486b2a936.PNG)
+![wireframe3](https://user-images.githubusercontent.com/32520466/126553604-e0f01582-3f5e-46e5-ba94-b7bcb58c9f22.PNG)
 
 ## Change Log
 <!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
