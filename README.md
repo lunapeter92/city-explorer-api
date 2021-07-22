@@ -14,6 +14,7 @@
 ![wireframehttprequest](https://user-images.githubusercontent.com/32520466/126553596-65f5bfc4-a31a-4ab7-8f4b-fce050e4706d.PNG)
 ![wireframe2](https://user-images.githubusercontent.com/32520466/126553599-382260b7-0976-481d-92f8-0af486b2a936.PNG)
 ![wireframe3](https://user-images.githubusercontent.com/32520466/126553604-e0f01582-3f5e-46e5-ba94-b7bcb58c9f22.PNG)
+![lab09 - whiteboard](https://user-images.githubusercontent.com/32520466/126705537-e57374ab-c9b1-4da8-b11a-3401d87bcb3f.png)
 
 ## Change Log
 <!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
