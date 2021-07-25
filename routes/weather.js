@@ -14,9 +14,12 @@ async function getWeather(req,res){
     try{
         let weatherUrl = `http://api.weatherbit.io/v2.0/current?key=${key}&lon=${lon}&lat=${lat}`
         let response = await axios.get(weatherUrl)
+        let newArr = response.data.data.map(item =>{
+            return new Forecast(item)
+        })
+        res.status(200).json(newArr)
         
-        res.json(`Date Time: ${response.data.data[0].datetime}, Description:  ${response.data.data[0].weather.description}`)
-        // res.json(response.data)
+        
     }catch(error){
         console.error(error)
     }
@@ -24,9 +27,9 @@ async function getWeather(req,res){
 }
 
 class Forecast {
-    constructor(datetime, desc){
-        this.date = datetime;
-        this.description = desc;
+    constructor(obj){
+        this.date = obj.datetime;
+        this.description = obj.weather.description;
     }
 }
 
